@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
 interface Evaluation {
   id: number;
   question: string;
@@ -32,7 +34,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await axios.get('http://localhost:8000/api/evaluation/history', {
+      const response = await axios.get(`${API_BASE_URL}/api/evaluation/history`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEvaluations(response.data);
