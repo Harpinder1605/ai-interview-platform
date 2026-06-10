@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.env.local
+
+# Database
+ai_interview.db

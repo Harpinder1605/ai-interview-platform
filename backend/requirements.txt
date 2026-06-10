@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+sqlalchemy
+psycopg2-binary
+websockets
+opencv-python-headless
+numpy
+slowapi==0.1.9
+httpx==0.27.0
